@@ -1,6 +1,6 @@
 # 🎨 Nalis Tech - Professional Nail Salon Management
 
-**Live Demo**: [View App](https://yourusername.github.io/Nalis-Tech-Demo/)
+**Live Demo**: [View App](https://the-obsidian-eyes.github.io/Nails-Tech-demo/)
 
 ## ✨ Features
 
