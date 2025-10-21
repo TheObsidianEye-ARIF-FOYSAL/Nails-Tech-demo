@@ -1,6 +1,6 @@
 # 💅 Nalis Tech - Professional Nail Salon Management System
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-View_App-blue?style=for-the-badge)](https://the-obsidian-eyes.github.io/Nails-Tech-demo/)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-View_App-blue?style=for-the-badge)](https://theobsidianeye-arif-foysal.github.io/Nails-Tech-demo/)
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Responsive](https://img.shields.io/badge/📱_Responsive-All_Devices-green?style=for-the-badge)](https://the-obsidian-eyes.github.io/Nails-Tech-demo/)
 
