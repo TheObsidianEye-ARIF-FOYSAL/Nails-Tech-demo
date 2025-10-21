@@ -8439,6 +8439,8 @@ google_sign_in
 google_sign_in_ios
 google_sign_in_platform_interface
 google_sign_in_web
+path_provider
+path_provider_foundation
 path_provider_linux
 path_provider_platform_interface
 path_provider_windows
@@ -12797,6 +12799,7 @@ FROM,OUT OF OR IN CONNECTION WITH THE MATERIALS OR THE USE OR OTHER DEALINGS
 IN THE MATERIALS.
 --------------------------------------------------------------------------------
 google_sign_in_android
+path_provider_android
 
 Copyright 2013 The Flutter Authors
 
