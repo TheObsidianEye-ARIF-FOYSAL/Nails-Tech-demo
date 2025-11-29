@@ -18126,10 +18126,12 @@
         mediaQuery = A.VirtualKeyboard_mediaQuery(mediaQuery);
       return mediaQuery.copyWith$6$accessibleNavigation$boldText$disableAnimations$invertColors$platformBrightness$textScaleFactor(accessibleNavigation, boldText, disableAnimations, invertColors, isDarkMode ? B.Brightness_0 : B.Brightness_1, textScaleFactor);
     },
-    DevicePreview: function DevicePreview(t0, t1, t2) {
-      this.enabled = t0;
-      this.builder = t1;
-      this.key = t2;
+    DevicePreview: function DevicePreview(t0, t1, t2, t3) {
+      var _ = this;
+      _.enabled = t0;
+      _.builder = t1;
+      _.defaultDevice = t2;
+      _.key = t3;
     },
     DevicePreview_platform_closure: function DevicePreview_platform_closure() {
     },
@@ -63447,7 +63449,7 @@
     main0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        t1, t2, t3, t4, t5, value, result;
+        t1, t2, t3, t4, t5, t6, value, result;
       var $async$main0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -63462,30 +63464,31 @@
               return A._asyncAwait(A.Firebase_initializeApp(A.DefaultFirebaseOptions_currentPlatform()), $async$main0);
             case 2:
               // returning from await.
+              t1 = $.$get$info();
               if ($.WidgetsBinding__instance == null)
                 A.WidgetsFlutterBinding$();
-              t1 = $.WidgetsBinding__instance;
-              t1.toString;
-              t2 = $.$get$EnginePlatformDispatcher__instance();
-              t3 = type$.nullable_EngineFlutterWindow;
-              if (t3._as(t2.get$viewManager()._viewData.$index(0, 0)) == null)
+              t2 = $.WidgetsBinding__instance;
+              t2.toString;
+              t3 = $.$get$EnginePlatformDispatcher__instance();
+              t4 = type$.nullable_EngineFlutterWindow;
+              if (t4._as(t3.get$viewManager()._viewData.$index(0, 0)) == null)
                 A.throwExpression(A.StateError$('The app requested a view, but the platform did not provide one.\nThis is likely because the app called `runApp` to render its root widget, which expects the platform to provide a default view to render into (the "implicit" view).\nHowever, the platform likely has multi-view mode enabled, which does not create this default "implicit" view.\nTry using `runWidget` instead of `runApp` to start your app.\n`runWidget` allows you to provide a `View` widget, without requiring a default view.\nSee: https://flutter.dev/to/web-multiview-runwidget'));
-              t4 = t3._as(t2.get$viewManager()._viewData.$index(0, 0));
-              t4.toString;
-              t5 = t1.get$pipelineOwner();
-              value = t1.RendererBinding___RendererBinding_renderView_FI;
+              t5 = t4._as(t3.get$viewManager()._viewData.$index(0, 0));
+              t5.toString;
+              t6 = t2.get$pipelineOwner();
+              value = t2.RendererBinding___RendererBinding_renderView_FI;
               if (value === $) {
-                t2 = t3._as(t2.get$viewManager()._viewData.$index(0, 0));
-                t2.toString;
-                result = new A._ReusableRenderView(B.Size_0_0, t2, null, A.LayerHandle$(type$.ContainerLayer_2));
+                t3 = t4._as(t3.get$viewManager()._viewData.$index(0, 0));
+                t3.toString;
+                result = new A._ReusableRenderView(B.Size_0_0, t3, null, A.LayerHandle$(type$.ContainerLayer_2));
                 result.RenderObject$0();
-                result.RenderView$3$child$configuration$view(null, null, t2);
-                t1.RendererBinding___RendererBinding_renderView_FI !== $ && A.throwUnnamedLateFieldADI();
-                t1.RendererBinding___RendererBinding_renderView_FI = result;
+                result.RenderView$3$child$configuration$view(null, null, t3);
+                t2.RendererBinding___RendererBinding_renderView_FI !== $ && A.throwUnnamedLateFieldADI();
+                t2.RendererBinding___RendererBinding_renderView_FI = result;
                 value = result;
               }
-              t1.scheduleAttachRootWidget$1(new A.View(t4, new A.ProviderScope(new A.DevicePreview(true, new A.main_closure1(), null), null), t5, value, null));
-              t1.scheduleWarmUpFrame$0();
+              t2.scheduleAttachRootWidget$1(new A.View(t5, new A.ProviderScope(new A.DevicePreview(true, new A.main_closure1(), t1, null), null), t6, value, null));
+              t2.scheduleWarmUpFrame$0();
               // implicit return
               return A._asyncReturn(null, $async$completer);
           }
@@ -109937,11 +109940,9 @@
   };
   A._DevicePreviewState_build_closure.prototype = {
     call$1(context) {
-      var t2, value,
-        t1 = this.$this;
-      t1._widget.toString;
-      t2 = $.$get$info();
-      value = t1.___DevicePreviewState_storage_AI;
+      var t1 = this.$this,
+        t2 = t1._widget.defaultDevice,
+        value = t1.___DevicePreviewState_storage_AI;
       if (value === $)
         value = t1.___DevicePreviewState_storage_AI = new A.PreferencesDevicePreviewStorage();
       t1 = new A.DevicePreviewStore(t2, B.C__$_NotInitializedDevicePreviewState, value, $.$get$ChangeNotifier__emptyListeners());
